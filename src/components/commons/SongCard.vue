@@ -1,6 +1,6 @@
 <template>
   <div class="card-song my-5 mx-3 py-4">
-      <img class="img-fluid" :src="song.poster"  alt="">
+      <img class="img-fluid" :src="song.poster" :alt="song.author">
       <h3>{{song.title}}</h3>
       <p>{{song.author}}</p>
       <small>{{song.year}}</small>
