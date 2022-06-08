@@ -1,11 +1,11 @@
 <template>
   <section>
-      <div class="container">
-          <div class="row" v-if="songs.length==10">
-              <SongCard class="col-12 col-sm-6 col-md-3 col-lg-2" v-for="song in songs" :key="song.title" :song="song"/>
-          </div>
-          <div v-else><LoginIcon/></div>
-      </div>
+    <div class="container">
+        <div class="row" v-if="songs.length==10">
+            <SongCard class="col-12 col-sm-6 col-md-3 col-lg-2" v-for="song in GenreFiltered" :key="song.title" :song="song"/>
+        </div>
+        <div v-else><LoginIcon/></div>
+    </div>
   </section>
 </template>
 
@@ -13,16 +13,18 @@
 import axios from 'axios';
 import SongCard from '../commons/SongCard.vue'
 import LoginIcon from '../commons/LoginIcon.vue';
+import dataSelect from '@/shared/dataSelect';
 export default {
     name: 'SectionSongCard',
     data() {
         return {
+            dataSelect,
             songs: [],
         };
     },
     components: {
         SongCard,
-        LoginIcon
+        LoginIcon,
     },
      created() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
@@ -35,6 +37,13 @@ export default {
             // handle error
             console.log(error);
         });
+    },
+    computed: {
+        GenreFiltered() {
+            return this.songs.filter((elm) => { 
+                return elm.genre.toLowerCase().includes(this.dataSelect.genreSelected.toLowerCase());
+            });
+        }
     }
 
 }

@@ -1,8 +1,8 @@
 <template>
    <div>
-        <label for="genre">Fascia d'età</label>
+        <label for="genre">Scegli un genere musicale tra:</label>
         <select id="genre" v-model="dataSelect.genreSelected">
-            <option value="Rocks">Rocks</option>
+            <option value="Rock">Rock</option>
             <option value="Pop">Pop</option>
             <option value="Jazz">Jazz</option>
             <option value="Metal">Metal</option>
@@ -23,6 +23,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
+label{
+    color: white;
+}
+
+select{
+    width: 50%;
+    margin: 10px;
+}
 </style>

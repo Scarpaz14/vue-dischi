@@ -1,7 +1,10 @@
 <template>
   <header>
     <div class="container-fluid py-2">
-        <LogoSpotifyVue/> 
+      <div class="row d-flex align-items-center">
+        <div class="col"><LogoSpotify/></div>
+        <div class="col"><select-genre/></div>
+      </div>
     </div>
   </header>
 </template>
@@ -10,11 +13,13 @@
 
 <script>
 
-import LogoSpotifyVue from '../commons/LogoSpotify.vue'
+import LogoSpotify from '../commons/LogoSpotify.vue';
+import SelectGenre from '../commons/SelectGenre.vue';
 export default {
  name: 'HeaderComponent',
  components: {
-     LogoSpotifyVue
+     LogoSpotify,
+     SelectGenre,
     }
 }
 </script>
@@ -25,7 +30,10 @@ export default {
 .container-fluid{
     background-color: #2e3a46;
     height:70px;
-    display: flex;
+}
+
+.col{
+  height: 100%;
 }
 
 

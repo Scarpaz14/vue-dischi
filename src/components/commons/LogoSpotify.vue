@@ -1,7 +1,5 @@
 <template>
-    <div class="logo-spotify">
-        <img class="img-fluid" src="../../assets/image/spotify-logo.png" alt="">
-    </div>
+    <img class="img-fluid" src="../../assets/image/spotify-logo.png" alt="">
 </template>
 
 <script>
@@ -14,8 +12,8 @@ export default {
 <style lang="scss" scoped>
 
 
-.logo-spotify{
-    display: flex;
+img{
+    height: 50px;
 }
 
 </style>

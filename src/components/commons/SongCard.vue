@@ -3,6 +3,7 @@
       <img class="img-fluid" :src="song.poster" :alt="song.author">
       <h3>{{song.title}}</h3>
       <p>{{song.author}}</p>
+      <p>{{song.genre}}</p>
       <small>{{song.year}}</small>
   </div>
 </template>

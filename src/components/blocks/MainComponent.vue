@@ -20,6 +20,7 @@ export default {
 
 main{
     background-color: #1e2d3b;
+    height: calc(100vh + 200px);
     
 }
 
