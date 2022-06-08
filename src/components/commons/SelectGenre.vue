@@ -2,6 +2,7 @@
    <div>
         <label for="genre">Scegli un genere musicale tra:</label>
         <select id="genre" v-model="dataSelect.genreSelected">
+            <option value="all">All</option>
             <option value="Rock">Rock</option>
             <option value="Pop">Pop</option>
             <option value="Jazz">Jazz</option>
@@ -17,8 +18,11 @@ export default {
     data(){
         return{
             dataSelect,
+            
         }
-    }
+    },
+
+    
 
 }
 </script>

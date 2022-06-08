@@ -30,6 +30,7 @@ export default {
 .container-fluid{
     background-color: #2e3a46;
     height:70px;
+
 }
 
 .col{

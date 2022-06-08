@@ -29,12 +29,10 @@ export default {
      created() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         .then((response) => {
-            // handle success
             this.songs =response.data.response;
             console.log(response.data.response)
         })
         .catch((error) => {
-            // handle error
             console.log(error);
         });
     },
